@@ -23,11 +23,165 @@
         <database>postgresql</database>
         <skip.db.creation>false</skip.db.creation>
         <jooq.generator.db.dialect>org.jooq.util.postgres.PostgresDatabase</jooq.generator.db.dialect>
-        <profiles.dir>${basedir}/../profiles</profiles.dir>
+        <profiles.dir>../profiles</profiles.dir>
     </properties>
 
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <!-- Dev profile is active by default -->
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <!--
+                    Specifies the build profile id, which is used to find out the correct properties file.
+                    This is not actually necessary for this example, but it can be used for other purposes.
+                -->
+                <build.profile.id>dev</build.profile.id>
+            </properties>
+            <build>
+                <filters>
+                    <!--
+                        Specifies path to the properties file, which contains profile specific
+                        configuration. In this case, the configuration file is searched
+                        from profiles/dev/ directory.
+                    -->
+                    <filter>${profiles.dir}/${build.profile.id}/config.properties</filter>
+                </filters>
+                <resources>
+                    <!--
+                        Placeholders found from files located in the configured resource directories are replaced
+                        with values found from the profile specific configuration files.
+                    -->
+                    <resource>
+                        <filtering>true</filtering>
+                        <directory>src/main/resources</directory>
+                        <!--
+                            You can also include only specific files found from the configured directory or
+                            exclude files. This can be done by uncommenting following sections and adding
+                            the configuration under includes and excludes tags.
+                        -->
+                        <!--
+                        <includes>
+                            <include></include>
+                        </includes>
+                        <excludes>
+                            <exclude></exclude>
+                        </excludes>
+                        -->
+                    </resource>
+                </resources>
+
+            </build>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <!--
+                    Specifies the build profile id, which is used to find out the correct properties file.
+                    This is not actually necessary for this example, but it can be used for other purposes.
+                -->
+                <build.profile.id>test</build.profile.id>
+            </properties>
+            <build>
+                <filters>
+                    <!--
+                        Specifies path to the properties file, which contains profile specific
+                        configuration. In this case, the configuration file is searched
+                        from profiles/test/ directory.
+                    -->
+                    <filter>${profiles.dir}/${build.profile.id}/config.properties</filter>
+                </filters>
+                <resources>
+                    <!--
+                        Placeholders found from files located in the configured resource directories are replaced
+                        with values found from the profile specific configuration files.
+                    -->
+                    <resource>
+                        <filtering>true</filtering>
+                        <directory>src/main/resources</directory>
+                        <!--
+                            You can also include only specific files found from the configured directory or
+                            exclude files. This can be done by uncommenting following sections and adding
+                            the configuration under includes and excludes tags.
+                        -->
+                        <!--
+                        <includes>
+                            <include></include>
+                        </includes>
+                        <excludes>
+                            <exclude></exclude>
+                        </excludes>
+                        -->
+                    </resource>
+                </resources>
+            </build>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <!--
+                    Specifies the build profile id, which is used to find out the correct properties file.
+                    This is not actually necessary for this example, but it can be used for other purposes.
+                -->
+                <build.profile.id>prod</build.profile.id>
+            </properties>
+            <build>
+                <filters>
+                    <!--
+                        Specifies path to the properties file, which contains profile
+                        specific configuration. In this case, the configuration file is searched
+                        from profiles/prod/ directory.
+                    -->
+                    <filter>${profiles.dir}/${build.profile.id}/config.properties</filter>
+                </filters>
+                <resources>
+                    <!--
+                        Placeholders found from files located in the configured resource directories are replaced
+                        with values found from the profile specific configuration files.
+                    -->
+                    <resource>
+                        <filtering>true</filtering>
+                        <directory>src/main/resources</directory>
+                        <!--
+                            You can also include only specific files found from the configured directory or
+                            exclude files. This can be done by uncommenting following sections and adding
+                            the configuration under includes and excludes tags.
+                        -->
+                        <!--
+                        <includes>
+                            <include></include>
+                        </includes>
+                        <excludes>
+                            <exclude></exclude>
+                        </excludes>
+                        -->
+                    </resource>
+                </resources>
+            </build>
+        </profile>
+    </profiles>
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>properties-maven-plugin</artifactId>
+                <version>1.0-alpha-2</version>
+                <executions>
+                    <execution>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>read-project-properties</goal>
+                        </goals>
+                        <configuration>
+                            <files>
+                                <file>${profiles.dir}/${build.profile.id}/config.properties</file>
+                            </files>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <!-- Specify the maven code generator plugin -->
                 <groupId>org.jooq</groupId>
