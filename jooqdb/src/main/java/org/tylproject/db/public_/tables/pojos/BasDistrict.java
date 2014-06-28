@@ -11,46 +11,37 @@ package org.tylproject.db.public_.tables.pojos;
 @java.lang.SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class BasDistrict implements java.io.Serializable {
 
-	private static final long serialVersionUID = 61259149;
+	private static final long serialVersionUID = -1134271216;
 
-	private java.lang.Integer  idBasDistrict;
-	private java.lang.String   idBasCountry;
-	private java.lang.String   district;
-	private java.lang.String   cityName;
-	private java.lang.String   postalCode;
-	private java.sql.Timestamp createdOn;
-	private java.lang.String   createdBy;
-	private java.sql.Timestamp updatedOn;
-	private java.lang.String   updatedBy;
-	private java.lang.Boolean  canceled;
-	private java.lang.Integer  version;
+	private java.lang.Integer                         idBasDistrict;
+	private java.lang.String                          idBasCountry;
+	private java.lang.String                          district;
+	private java.lang.String                          cityName;
+	private java.lang.String                          postalCode;
+	private java.lang.Boolean                         canceled;
+	private java.lang.Integer                         version;
+	private org.tylproject.db.public_.udt.pojos.Track track;
 
 	public BasDistrict() {}
 
 	public BasDistrict(
-		java.lang.Integer  idBasDistrict,
-		java.lang.String   idBasCountry,
-		java.lang.String   district,
-		java.lang.String   cityName,
-		java.lang.String   postalCode,
-		java.sql.Timestamp createdOn,
-		java.lang.String   createdBy,
-		java.sql.Timestamp updatedOn,
-		java.lang.String   updatedBy,
-		java.lang.Boolean  canceled,
-		java.lang.Integer  version
+		java.lang.Integer                         idBasDistrict,
+		java.lang.String                          idBasCountry,
+		java.lang.String                          district,
+		java.lang.String                          cityName,
+		java.lang.String                          postalCode,
+		java.lang.Boolean                         canceled,
+		java.lang.Integer                         version,
+		org.tylproject.db.public_.udt.pojos.Track track
 	) {
 		this.idBasDistrict = idBasDistrict;
 		this.idBasCountry = idBasCountry;
 		this.district = district;
 		this.cityName = cityName;
 		this.postalCode = postalCode;
-		this.createdOn = createdOn;
-		this.createdBy = createdBy;
-		this.updatedOn = updatedOn;
-		this.updatedBy = updatedBy;
 		this.canceled = canceled;
 		this.version = version;
+		this.track = track;
 	}
 
 	public java.lang.Integer getIdBasDistrict() {
@@ -98,42 +89,6 @@ public class BasDistrict implements java.io.Serializable {
 		return this;
 	}
 
-	public java.sql.Timestamp getCreatedOn() {
-		return this.createdOn;
-	}
-
-	public BasDistrict setCreatedOn(java.sql.Timestamp createdOn) {
-		this.createdOn = createdOn;
-		return this;
-	}
-
-	public java.lang.String getCreatedBy() {
-		return this.createdBy;
-	}
-
-	public BasDistrict setCreatedBy(java.lang.String createdBy) {
-		this.createdBy = createdBy;
-		return this;
-	}
-
-	public java.sql.Timestamp getUpdatedOn() {
-		return this.updatedOn;
-	}
-
-	public BasDistrict setUpdatedOn(java.sql.Timestamp updatedOn) {
-		this.updatedOn = updatedOn;
-		return this;
-	}
-
-	public java.lang.String getUpdatedBy() {
-		return this.updatedBy;
-	}
-
-	public BasDistrict setUpdatedBy(java.lang.String updatedBy) {
-		this.updatedBy = updatedBy;
-		return this;
-	}
-
 	public java.lang.Boolean getCanceled() {
 		return this.canceled;
 	}
@@ -149,6 +104,15 @@ public class BasDistrict implements java.io.Serializable {
 
 	public BasDistrict setVersion(java.lang.Integer version) {
 		this.version = version;
+		return this;
+	}
+
+	public org.tylproject.db.public_.udt.pojos.Track getTrack() {
+		return this.track;
+	}
+
+	public BasDistrict setTrack(org.tylproject.db.public_.udt.pojos.Track track) {
+		this.track = track;
 		return this;
 	}
 }

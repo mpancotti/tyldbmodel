@@ -11,37 +11,31 @@ package org.tylproject.db.public_.tables.pojos;
 @java.lang.SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class BasFreezereason implements java.io.Serializable {
 
-	private static final long serialVersionUID = 38598865;
+	private static final long serialVersionUID = 1241348907;
 
-	private java.lang.String   idFreezereason;
-	private java.lang.String   discriminator;
-	private java.sql.Timestamp createdOn;
-	private java.lang.String   createdBy;
-	private java.sql.Timestamp updatedOn;
-	private java.lang.String   updatedBy;
-	private java.lang.Boolean  canceled;
-	private java.lang.Integer  version;
+	private java.lang.String                          idFreezereason;
+	private java.lang.String                          discriminator;
+	private java.lang.String                          description;
+	private java.lang.Boolean                         canceled;
+	private java.lang.Integer                         version;
+	private org.tylproject.db.public_.udt.pojos.Track track;
 
 	public BasFreezereason() {}
 
 	public BasFreezereason(
-		java.lang.String   idFreezereason,
-		java.lang.String   discriminator,
-		java.sql.Timestamp createdOn,
-		java.lang.String   createdBy,
-		java.sql.Timestamp updatedOn,
-		java.lang.String   updatedBy,
-		java.lang.Boolean  canceled,
-		java.lang.Integer  version
+		java.lang.String                          idFreezereason,
+		java.lang.String                          discriminator,
+		java.lang.String                          description,
+		java.lang.Boolean                         canceled,
+		java.lang.Integer                         version,
+		org.tylproject.db.public_.udt.pojos.Track track
 	) {
 		this.idFreezereason = idFreezereason;
 		this.discriminator = discriminator;
-		this.createdOn = createdOn;
-		this.createdBy = createdBy;
-		this.updatedOn = updatedOn;
-		this.updatedBy = updatedBy;
+		this.description = description;
 		this.canceled = canceled;
 		this.version = version;
+		this.track = track;
 	}
 
 	public java.lang.String getIdFreezereason() {
@@ -62,39 +56,12 @@ public class BasFreezereason implements java.io.Serializable {
 		return this;
 	}
 
-	public java.sql.Timestamp getCreatedOn() {
-		return this.createdOn;
+	public java.lang.String getDescription() {
+		return this.description;
 	}
 
-	public BasFreezereason setCreatedOn(java.sql.Timestamp createdOn) {
-		this.createdOn = createdOn;
-		return this;
-	}
-
-	public java.lang.String getCreatedBy() {
-		return this.createdBy;
-	}
-
-	public BasFreezereason setCreatedBy(java.lang.String createdBy) {
-		this.createdBy = createdBy;
-		return this;
-	}
-
-	public java.sql.Timestamp getUpdatedOn() {
-		return this.updatedOn;
-	}
-
-	public BasFreezereason setUpdatedOn(java.sql.Timestamp updatedOn) {
-		this.updatedOn = updatedOn;
-		return this;
-	}
-
-	public java.lang.String getUpdatedBy() {
-		return this.updatedBy;
-	}
-
-	public BasFreezereason setUpdatedBy(java.lang.String updatedBy) {
-		this.updatedBy = updatedBy;
+	public BasFreezereason setDescription(java.lang.String description) {
+		this.description = description;
 		return this;
 	}
 
@@ -113,6 +80,15 @@ public class BasFreezereason implements java.io.Serializable {
 
 	public BasFreezereason setVersion(java.lang.Integer version) {
 		this.version = version;
+		return this;
+	}
+
+	public org.tylproject.db.public_.udt.pojos.Track getTrack() {
+		return this.track;
+	}
+
+	public BasFreezereason setTrack(org.tylproject.db.public_.udt.pojos.Track track) {
+		this.track = track;
 		return this;
 	}
 }

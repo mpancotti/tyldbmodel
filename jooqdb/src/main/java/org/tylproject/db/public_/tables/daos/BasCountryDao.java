@@ -69,34 +69,6 @@ public class BasCountryDao extends org.jooq.impl.DAOImpl<org.tylproject.db.publi
 	}
 
 	/**
-	 * Fetch records that have <code>created_on IN (values)</code>
-	 */
-	public java.util.List<org.tylproject.db.public_.tables.pojos.BasCountry> fetchByCreatedOn(java.sql.Timestamp... values) {
-		return fetch(org.tylproject.db.public_.tables.BasCountry.BAS_COUNTRY.CREATED_ON, values);
-	}
-
-	/**
-	 * Fetch records that have <code>created_by IN (values)</code>
-	 */
-	public java.util.List<org.tylproject.db.public_.tables.pojos.BasCountry> fetchByCreatedBy(java.lang.String... values) {
-		return fetch(org.tylproject.db.public_.tables.BasCountry.BAS_COUNTRY.CREATED_BY, values);
-	}
-
-	/**
-	 * Fetch records that have <code>updated_on IN (values)</code>
-	 */
-	public java.util.List<org.tylproject.db.public_.tables.pojos.BasCountry> fetchByUpdatedOn(java.sql.Timestamp... values) {
-		return fetch(org.tylproject.db.public_.tables.BasCountry.BAS_COUNTRY.UPDATED_ON, values);
-	}
-
-	/**
-	 * Fetch records that have <code>updated_by IN (values)</code>
-	 */
-	public java.util.List<org.tylproject.db.public_.tables.pojos.BasCountry> fetchByUpdatedBy(java.lang.String... values) {
-		return fetch(org.tylproject.db.public_.tables.BasCountry.BAS_COUNTRY.UPDATED_BY, values);
-	}
-
-	/**
 	 * Fetch records that have <code>canceled IN (values)</code>
 	 */
 	public java.util.List<org.tylproject.db.public_.tables.pojos.BasCountry> fetchByCanceled(java.lang.Boolean... values) {
@@ -108,5 +80,12 @@ public class BasCountryDao extends org.jooq.impl.DAOImpl<org.tylproject.db.publi
 	 */
 	public java.util.List<org.tylproject.db.public_.tables.pojos.BasCountry> fetchByVersion(java.lang.Integer... values) {
 		return fetch(org.tylproject.db.public_.tables.BasCountry.BAS_COUNTRY.VERSION, values);
+	}
+
+	/**
+	 * Fetch records that have <code>track IN (values)</code>
+	 */
+	public java.util.List<org.tylproject.db.public_.tables.pojos.BasCountry> fetchByTrack(org.tylproject.db.public_.udt.records.TrackRecord... values) {
+		return fetch(org.tylproject.db.public_.tables.BasCountry.BAS_COUNTRY.TRACK, values);
 	}
 }

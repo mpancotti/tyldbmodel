@@ -11,7 +11,7 @@ package org.tylproject.db.public_.tables;
 @java.lang.SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class BasLanguage extends org.jooq.impl.TableImpl<org.tylproject.db.public_.tables.records.BasLanguageRecord> {
 
-	private static final long serialVersionUID = -1646167833;
+	private static final long serialVersionUID = -2042686459;
 
 	/**
 	 * The singleton instance of <code>public.bas_language</code>
@@ -32,6 +32,11 @@ public class BasLanguage extends org.jooq.impl.TableImpl<org.tylproject.db.publi
 	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasLanguageRecord, java.lang.String> ID_BAS_LANGUAGE = createField("id_bas_language", org.jooq.impl.SQLDataType.VARCHAR.length(5).nullable(false), this, "");
 
 	/**
+	 * The column <code>public.bas_language.active</code>.
+	 */
+	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasLanguageRecord, java.lang.Boolean> ACTIVE = createField("active", org.jooq.impl.SQLDataType.BOOLEAN.nullable(false), this, "");
+
+	/**
 	 * The column <code>public.bas_language.flag</code>.
 	 */
 	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasLanguageRecord, java.lang.String> FLAG = createField("flag", org.jooq.impl.SQLDataType.VARCHAR.length(256), this, "");
@@ -42,26 +47,6 @@ public class BasLanguage extends org.jooq.impl.TableImpl<org.tylproject.db.publi
 	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasLanguageRecord, java.lang.String> NAME = createField("name", org.jooq.impl.SQLDataType.VARCHAR.length(64), this, "");
 
 	/**
-	 * The column <code>public.bas_language.created_on</code>.
-	 */
-	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasLanguageRecord, java.sql.Timestamp> CREATED_ON = createField("created_on", org.jooq.impl.SQLDataType.TIMESTAMP.defaulted(true), this, "");
-
-	/**
-	 * The column <code>public.bas_language.created_by</code>.
-	 */
-	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasLanguageRecord, java.lang.String> CREATED_BY = createField("created_by", org.jooq.impl.SQLDataType.VARCHAR.length(64), this, "");
-
-	/**
-	 * The column <code>public.bas_language.updated_on</code>.
-	 */
-	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasLanguageRecord, java.sql.Timestamp> UPDATED_ON = createField("updated_on", org.jooq.impl.SQLDataType.TIMESTAMP.defaulted(true), this, "");
-
-	/**
-	 * The column <code>public.bas_language.updated_by</code>.
-	 */
-	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasLanguageRecord, java.lang.String> UPDATED_BY = createField("updated_by", org.jooq.impl.SQLDataType.VARCHAR.length(64), this, "");
-
-	/**
 	 * The column <code>public.bas_language.canceled</code>.
 	 */
 	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasLanguageRecord, java.lang.Boolean> CANCELED = createField("canceled", org.jooq.impl.SQLDataType.BOOLEAN.defaulted(true), this, "");
@@ -69,12 +54,12 @@ public class BasLanguage extends org.jooq.impl.TableImpl<org.tylproject.db.publi
 	/**
 	 * The column <code>public.bas_language.version</code>.
 	 */
-	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasLanguageRecord, java.lang.Integer> VERSION = createField("version", org.jooq.impl.SQLDataType.INTEGER.defaulted(true), this, "");
+	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasLanguageRecord, java.lang.Integer> VERSION = createField("version", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaulted(true), this, "");
 
 	/**
-	 * The column <code>public.bas_language.active</code>.
+	 * The column <code>public.bas_language.track</code>.
 	 */
-	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasLanguageRecord, java.lang.Boolean> ACTIVE = createField("active", org.jooq.impl.SQLDataType.BOOLEAN.nullable(false), this, "");
+	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasLanguageRecord, org.tylproject.db.public_.udt.records.TrackRecord> TRACK = createField("track", org.tylproject.db.public_.udt.Track.TRACK.getDataType(), this, "");
 
 	/**
 	 * Create a <code>public.bas_language</code> table reference

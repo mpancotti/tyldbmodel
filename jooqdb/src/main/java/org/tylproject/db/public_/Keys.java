@@ -21,6 +21,7 @@ public class Keys {
 	public static final org.jooq.Identity<org.tylproject.db.public_.tables.records.AutUserroleCompanyRecord, java.lang.Integer> IDENTITY_AUT_USERROLE_COMPANY = Identities0.IDENTITY_AUT_USERROLE_COMPANY;
 	public static final org.jooq.Identity<org.tylproject.db.public_.tables.records.BasDistrictRecord, java.lang.Integer> IDENTITY_BAS_DISTRICT = Identities0.IDENTITY_BAS_DISTRICT;
 	public static final org.jooq.Identity<org.tylproject.db.public_.tables.records.ExcExchangerateRecord, java.lang.Integer> IDENTITY_EXC_EXCHANGERATE = Identities0.IDENTITY_EXC_EXCHANGERATE;
+	public static final org.jooq.Identity<org.tylproject.db.public_.tables.records.TodosRecord, java.lang.Integer> IDENTITY_TODOS = Identities0.IDENTITY_TODOS;
 
 	// -------------------------------------------------------------------------
 	// UNIQUE and PRIMARY KEY definitions
@@ -36,6 +37,7 @@ public class Keys {
 	public static final org.jooq.UniqueKey<org.tylproject.db.public_.tables.records.BasLanguageRecord> BAS_LANGUAGE_BAS_FOREIGNLANGUAGE_PKEY = UniqueKeys0.BAS_LANGUAGE_BAS_FOREIGNLANGUAGE_PKEY;
 	public static final org.jooq.UniqueKey<org.tylproject.db.public_.tables.records.ExcExchangerateRecord> EXC_EXCHANGERATE_PKEY = UniqueKeys0.EXC_EXCHANGERATE_PKEY;
 	public static final org.jooq.UniqueKey<org.tylproject.db.public_.tables.records.ExcForeigncurrencyRecord> TABEXC_FOREIGNCURRENCY_PKEY = UniqueKeys0.TABEXC_FOREIGNCURRENCY_PKEY;
+	public static final org.jooq.UniqueKey<org.tylproject.db.public_.tables.records.TodosRecord> TODOS_PKEY = UniqueKeys0.TODOS_PKEY;
 
 	// -------------------------------------------------------------------------
 	// FOREIGN KEY definitions
@@ -45,6 +47,8 @@ public class Keys {
 	public static final org.jooq.ForeignKey<org.tylproject.db.public_.tables.records.AutUserroleCompanyRecord, org.tylproject.db.public_.tables.records.AutUserroleRecord> AUT_USERROLE_COMPANY__AUT_USERROLE_FK = ForeignKeys0.AUT_USERROLE_COMPANY__AUT_USERROLE_FK;
 	public static final org.jooq.ForeignKey<org.tylproject.db.public_.tables.records.AutUserroleCompanyRecord, org.tylproject.db.public_.tables.records.AutCompanyRecord> AUT_USERROLE_COMPANY__AUT_USERROLE_COMPANY_FK = ForeignKeys0.AUT_USERROLE_COMPANY__AUT_USERROLE_COMPANY_FK;
 	public static final org.jooq.ForeignKey<org.tylproject.db.public_.tables.records.BasDistrictRecord, org.tylproject.db.public_.tables.records.BasCountryRecord> BAS_DISTRICT__BAS_DISTRICT_FK = ForeignKeys0.BAS_DISTRICT__BAS_DISTRICT_FK;
+	public static final org.jooq.ForeignKey<org.tylproject.db.public_.tables.records.ExcExchangerateRecord, org.tylproject.db.public_.tables.records.ExcForeigncurrencyRecord> EXC_EXCHANGERATE__EXC_EXCHANGERATE_FK = ForeignKeys0.EXC_EXCHANGERATE__EXC_EXCHANGERATE_FK;
+	public static final org.jooq.ForeignKey<org.tylproject.db.public_.tables.records.ExcExchangerateRecord, org.tylproject.db.public_.tables.records.ExcForeigncurrencyRecord> EXC_EXCHANGERATE__EXC_EXCHANGERATE_FK1 = ForeignKeys0.EXC_EXCHANGERATE__EXC_EXCHANGERATE_FK1;
 
 	// -------------------------------------------------------------------------
 	// [#1459] distribute members to avoid static initialisers > 64kb
@@ -54,6 +58,7 @@ public class Keys {
 		public static org.jooq.Identity<org.tylproject.db.public_.tables.records.AutUserroleCompanyRecord, java.lang.Integer> IDENTITY_AUT_USERROLE_COMPANY = createIdentity(org.tylproject.db.public_.tables.AutUserroleCompany.AUT_USERROLE_COMPANY, org.tylproject.db.public_.tables.AutUserroleCompany.AUT_USERROLE_COMPANY.ID_AUT_USERROLE_COMPANY);
 		public static org.jooq.Identity<org.tylproject.db.public_.tables.records.BasDistrictRecord, java.lang.Integer> IDENTITY_BAS_DISTRICT = createIdentity(org.tylproject.db.public_.tables.BasDistrict.BAS_DISTRICT, org.tylproject.db.public_.tables.BasDistrict.BAS_DISTRICT.ID_BAS_DISTRICT);
 		public static org.jooq.Identity<org.tylproject.db.public_.tables.records.ExcExchangerateRecord, java.lang.Integer> IDENTITY_EXC_EXCHANGERATE = createIdentity(org.tylproject.db.public_.tables.ExcExchangerate.EXC_EXCHANGERATE, org.tylproject.db.public_.tables.ExcExchangerate.EXC_EXCHANGERATE.ID_EXC_EXCHANGERATE);
+		public static org.jooq.Identity<org.tylproject.db.public_.tables.records.TodosRecord, java.lang.Integer> IDENTITY_TODOS = createIdentity(org.tylproject.db.public_.tables.Todos.TODOS, org.tylproject.db.public_.tables.Todos.TODOS.ID);
 	}
 
 	private static class UniqueKeys0 extends org.jooq.impl.AbstractKeys {
@@ -67,6 +72,7 @@ public class Keys {
 		public static final org.jooq.UniqueKey<org.tylproject.db.public_.tables.records.BasLanguageRecord> BAS_LANGUAGE_BAS_FOREIGNLANGUAGE_PKEY = createUniqueKey(org.tylproject.db.public_.tables.BasLanguage.BAS_LANGUAGE, org.tylproject.db.public_.tables.BasLanguage.BAS_LANGUAGE.ID_BAS_LANGUAGE);
 		public static final org.jooq.UniqueKey<org.tylproject.db.public_.tables.records.ExcExchangerateRecord> EXC_EXCHANGERATE_PKEY = createUniqueKey(org.tylproject.db.public_.tables.ExcExchangerate.EXC_EXCHANGERATE, org.tylproject.db.public_.tables.ExcExchangerate.EXC_EXCHANGERATE.ID_EXC_EXCHANGERATE);
 		public static final org.jooq.UniqueKey<org.tylproject.db.public_.tables.records.ExcForeigncurrencyRecord> TABEXC_FOREIGNCURRENCY_PKEY = createUniqueKey(org.tylproject.db.public_.tables.ExcForeigncurrency.EXC_FOREIGNCURRENCY, org.tylproject.db.public_.tables.ExcForeigncurrency.EXC_FOREIGNCURRENCY.ID_EXC_FOREIGNCURRENCY);
+		public static final org.jooq.UniqueKey<org.tylproject.db.public_.tables.records.TodosRecord> TODOS_PKEY = createUniqueKey(org.tylproject.db.public_.tables.Todos.TODOS, org.tylproject.db.public_.tables.Todos.TODOS.ID);
 	}
 
 	private static class ForeignKeys0 extends org.jooq.impl.AbstractKeys {
@@ -74,5 +80,7 @@ public class Keys {
 		public static final org.jooq.ForeignKey<org.tylproject.db.public_.tables.records.AutUserroleCompanyRecord, org.tylproject.db.public_.tables.records.AutUserroleRecord> AUT_USERROLE_COMPANY__AUT_USERROLE_FK = createForeignKey(org.tylproject.db.public_.Keys.AUT_USERROLE_PKEY, org.tylproject.db.public_.tables.AutUserroleCompany.AUT_USERROLE_COMPANY, org.tylproject.db.public_.tables.AutUserroleCompany.AUT_USERROLE_COMPANY.ID_AUT_USERROLE);
 		public static final org.jooq.ForeignKey<org.tylproject.db.public_.tables.records.AutUserroleCompanyRecord, org.tylproject.db.public_.tables.records.AutCompanyRecord> AUT_USERROLE_COMPANY__AUT_USERROLE_COMPANY_FK = createForeignKey(org.tylproject.db.public_.Keys.AUT_COMPANY_PKEY, org.tylproject.db.public_.tables.AutUserroleCompany.AUT_USERROLE_COMPANY, org.tylproject.db.public_.tables.AutUserroleCompany.AUT_USERROLE_COMPANY.ID_AUT_COMPANY);
 		public static final org.jooq.ForeignKey<org.tylproject.db.public_.tables.records.BasDistrictRecord, org.tylproject.db.public_.tables.records.BasCountryRecord> BAS_DISTRICT__BAS_DISTRICT_FK = createForeignKey(org.tylproject.db.public_.Keys.BAS_COUNTRY_PKEY, org.tylproject.db.public_.tables.BasDistrict.BAS_DISTRICT, org.tylproject.db.public_.tables.BasDistrict.BAS_DISTRICT.ID_BAS_COUNTRY);
+		public static final org.jooq.ForeignKey<org.tylproject.db.public_.tables.records.ExcExchangerateRecord, org.tylproject.db.public_.tables.records.ExcForeigncurrencyRecord> EXC_EXCHANGERATE__EXC_EXCHANGERATE_FK = createForeignKey(org.tylproject.db.public_.Keys.TABEXC_FOREIGNCURRENCY_PKEY, org.tylproject.db.public_.tables.ExcExchangerate.EXC_EXCHANGERATE, org.tylproject.db.public_.tables.ExcExchangerate.EXC_EXCHANGERATE.FROM_CURRENCY_FK);
+		public static final org.jooq.ForeignKey<org.tylproject.db.public_.tables.records.ExcExchangerateRecord, org.tylproject.db.public_.tables.records.ExcForeigncurrencyRecord> EXC_EXCHANGERATE__EXC_EXCHANGERATE_FK1 = createForeignKey(org.tylproject.db.public_.Keys.TABEXC_FOREIGNCURRENCY_PKEY, org.tylproject.db.public_.tables.ExcExchangerate.EXC_EXCHANGERATE, org.tylproject.db.public_.tables.ExcExchangerate.EXC_EXCHANGERATE.TO_CURRENCY_FK);
 	}
 }

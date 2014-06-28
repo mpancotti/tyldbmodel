@@ -11,7 +11,7 @@ package org.tylproject.db.public_.tables;
 @java.lang.SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class BasFreezereason extends org.jooq.impl.TableImpl<org.tylproject.db.public_.tables.records.BasFreezereasonRecord> {
 
-	private static final long serialVersionUID = -1632975595;
+	private static final long serialVersionUID = -1206555910;
 
 	/**
 	 * The singleton instance of <code>public.bas_freezereason</code>
@@ -34,27 +34,12 @@ public class BasFreezereason extends org.jooq.impl.TableImpl<org.tylproject.db.p
 	/**
 	 * The column <code>public.bas_freezereason.discriminator</code>.
 	 */
-	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasFreezereasonRecord, java.lang.String> DISCRIMINATOR = createField("discriminator", org.jooq.impl.SQLDataType.VARCHAR.length(3), this, "");
+	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasFreezereasonRecord, java.lang.String> DISCRIMINATOR = createField("discriminator", org.jooq.impl.SQLDataType.VARCHAR.length(16), this, "");
 
 	/**
-	 * The column <code>public.bas_freezereason.created_on</code>.
+	 * The column <code>public.bas_freezereason.description</code>.
 	 */
-	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasFreezereasonRecord, java.sql.Timestamp> CREATED_ON = createField("created_on", org.jooq.impl.SQLDataType.TIMESTAMP.defaulted(true), this, "");
-
-	/**
-	 * The column <code>public.bas_freezereason.created_by</code>.
-	 */
-	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasFreezereasonRecord, java.lang.String> CREATED_BY = createField("created_by", org.jooq.impl.SQLDataType.VARCHAR.length(1), this, "");
-
-	/**
-	 * The column <code>public.bas_freezereason.updated_on</code>.
-	 */
-	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasFreezereasonRecord, java.sql.Timestamp> UPDATED_ON = createField("updated_on", org.jooq.impl.SQLDataType.TIMESTAMP.defaulted(true), this, "");
-
-	/**
-	 * The column <code>public.bas_freezereason.updated_by</code>.
-	 */
-	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasFreezereasonRecord, java.lang.String> UPDATED_BY = createField("updated_by", org.jooq.impl.SQLDataType.VARCHAR.length(1), this, "");
+	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasFreezereasonRecord, java.lang.String> DESCRIPTION = createField("description", org.jooq.impl.SQLDataType.CLOB, this, "");
 
 	/**
 	 * The column <code>public.bas_freezereason.canceled</code>.
@@ -64,7 +49,12 @@ public class BasFreezereason extends org.jooq.impl.TableImpl<org.tylproject.db.p
 	/**
 	 * The column <code>public.bas_freezereason.version</code>.
 	 */
-	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasFreezereasonRecord, java.lang.Integer> VERSION = createField("version", org.jooq.impl.SQLDataType.INTEGER.defaulted(true), this, "");
+	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasFreezereasonRecord, java.lang.Integer> VERSION = createField("version", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaulted(true), this, "");
+
+	/**
+	 * The column <code>public.bas_freezereason.track</code>.
+	 */
+	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasFreezereasonRecord, org.tylproject.db.public_.udt.records.TrackRecord> TRACK = createField("track", org.tylproject.db.public_.udt.Track.TRACK.getDataType(), this, "");
 
 	/**
 	 * Create a <code>public.bas_freezereason</code> table reference

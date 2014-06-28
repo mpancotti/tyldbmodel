@@ -76,34 +76,6 @@ public class BasDistrictDao extends org.jooq.impl.DAOImpl<org.tylproject.db.publ
 	}
 
 	/**
-	 * Fetch records that have <code>created_on IN (values)</code>
-	 */
-	public java.util.List<org.tylproject.db.public_.tables.pojos.BasDistrict> fetchByCreatedOn(java.sql.Timestamp... values) {
-		return fetch(org.tylproject.db.public_.tables.BasDistrict.BAS_DISTRICT.CREATED_ON, values);
-	}
-
-	/**
-	 * Fetch records that have <code>created_by IN (values)</code>
-	 */
-	public java.util.List<org.tylproject.db.public_.tables.pojos.BasDistrict> fetchByCreatedBy(java.lang.String... values) {
-		return fetch(org.tylproject.db.public_.tables.BasDistrict.BAS_DISTRICT.CREATED_BY, values);
-	}
-
-	/**
-	 * Fetch records that have <code>updated_on IN (values)</code>
-	 */
-	public java.util.List<org.tylproject.db.public_.tables.pojos.BasDistrict> fetchByUpdatedOn(java.sql.Timestamp... values) {
-		return fetch(org.tylproject.db.public_.tables.BasDistrict.BAS_DISTRICT.UPDATED_ON, values);
-	}
-
-	/**
-	 * Fetch records that have <code>updated_by IN (values)</code>
-	 */
-	public java.util.List<org.tylproject.db.public_.tables.pojos.BasDistrict> fetchByUpdatedBy(java.lang.String... values) {
-		return fetch(org.tylproject.db.public_.tables.BasDistrict.BAS_DISTRICT.UPDATED_BY, values);
-	}
-
-	/**
 	 * Fetch records that have <code>canceled IN (values)</code>
 	 */
 	public java.util.List<org.tylproject.db.public_.tables.pojos.BasDistrict> fetchByCanceled(java.lang.Boolean... values) {
@@ -115,5 +87,12 @@ public class BasDistrictDao extends org.jooq.impl.DAOImpl<org.tylproject.db.publ
 	 */
 	public java.util.List<org.tylproject.db.public_.tables.pojos.BasDistrict> fetchByVersion(java.lang.Integer... values) {
 		return fetch(org.tylproject.db.public_.tables.BasDistrict.BAS_DISTRICT.VERSION, values);
+	}
+
+	/**
+	 * Fetch records that have <code>track IN (values)</code>
+	 */
+	public java.util.List<org.tylproject.db.public_.tables.pojos.BasDistrict> fetchByTrack(org.tylproject.db.public_.udt.records.TrackRecord... values) {
+		return fetch(org.tylproject.db.public_.tables.BasDistrict.BAS_DISTRICT.TRACK, values);
 	}
 }

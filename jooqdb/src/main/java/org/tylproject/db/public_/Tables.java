@@ -62,4 +62,9 @@ public class Tables {
 	 * The table public.exc_foreigncurrency
 	 */
 	public static final org.tylproject.db.public_.tables.ExcForeigncurrency EXC_FOREIGNCURRENCY = org.tylproject.db.public_.tables.ExcForeigncurrency.EXC_FOREIGNCURRENCY;
+
+	/**
+	 * The table public.todos
+	 */
+	public static final org.tylproject.db.public_.tables.Todos TODOS = org.tylproject.db.public_.tables.Todos.TODOS;
 }

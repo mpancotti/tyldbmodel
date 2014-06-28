@@ -46,4 +46,67 @@ public class ExcExchangerateDao extends org.jooq.impl.DAOImpl<org.tylproject.db.
 	public org.tylproject.db.public_.tables.pojos.ExcExchangerate fetchOneByIdExcExchangerate(java.lang.Integer value) {
 		return fetchOne(org.tylproject.db.public_.tables.ExcExchangerate.EXC_EXCHANGERATE.ID_EXC_EXCHANGERATE, value);
 	}
+
+	/**
+	 * Fetch records that have <code>from_currency_fk IN (values)</code>
+	 */
+	public java.util.List<org.tylproject.db.public_.tables.pojos.ExcExchangerate> fetchByFromCurrencyFk(java.lang.String... values) {
+		return fetch(org.tylproject.db.public_.tables.ExcExchangerate.EXC_EXCHANGERATE.FROM_CURRENCY_FK, values);
+	}
+
+	/**
+	 * Fetch records that have <code>to_currency_fk IN (values)</code>
+	 */
+	public java.util.List<org.tylproject.db.public_.tables.pojos.ExcExchangerate> fetchByToCurrencyFk(java.lang.String... values) {
+		return fetch(org.tylproject.db.public_.tables.ExcExchangerate.EXC_EXCHANGERATE.TO_CURRENCY_FK, values);
+	}
+
+	/**
+	 * Fetch records that have <code>from_date IN (values)</code>
+	 */
+	public java.util.List<org.tylproject.db.public_.tables.pojos.ExcExchangerate> fetchByFromDate(java.sql.Timestamp... values) {
+		return fetch(org.tylproject.db.public_.tables.ExcExchangerate.EXC_EXCHANGERATE.FROM_DATE, values);
+	}
+
+	/**
+	 * Fetch records that have <code>thru_date IN (values)</code>
+	 */
+	public java.util.List<org.tylproject.db.public_.tables.pojos.ExcExchangerate> fetchByThruDate(java.sql.Timestamp... values) {
+		return fetch(org.tylproject.db.public_.tables.ExcExchangerate.EXC_EXCHANGERATE.THRU_DATE, values);
+	}
+
+	/**
+	 * Fetch records that have <code>rate IN (values)</code>
+	 */
+	public java.util.List<org.tylproject.db.public_.tables.pojos.ExcExchangerate> fetchByRate(java.math.BigDecimal... values) {
+		return fetch(org.tylproject.db.public_.tables.ExcExchangerate.EXC_EXCHANGERATE.RATE, values);
+	}
+
+	/**
+	 * Fetch records that have <code>rounding_factor IN (values)</code>
+	 */
+	public java.util.List<org.tylproject.db.public_.tables.pojos.ExcExchangerate> fetchByRoundingFactor(java.math.BigDecimal... values) {
+		return fetch(org.tylproject.db.public_.tables.ExcExchangerate.EXC_EXCHANGERATE.ROUNDING_FACTOR, values);
+	}
+
+	/**
+	 * Fetch records that have <code>canceled IN (values)</code>
+	 */
+	public java.util.List<org.tylproject.db.public_.tables.pojos.ExcExchangerate> fetchByCanceled(java.lang.Boolean... values) {
+		return fetch(org.tylproject.db.public_.tables.ExcExchangerate.EXC_EXCHANGERATE.CANCELED, values);
+	}
+
+	/**
+	 * Fetch records that have <code>version IN (values)</code>
+	 */
+	public java.util.List<org.tylproject.db.public_.tables.pojos.ExcExchangerate> fetchByVersion(java.lang.Integer... values) {
+		return fetch(org.tylproject.db.public_.tables.ExcExchangerate.EXC_EXCHANGERATE.VERSION, values);
+	}
+
+	/**
+	 * Fetch records that have <code>track IN (values)</code>
+	 */
+	public java.util.List<org.tylproject.db.public_.tables.pojos.ExcExchangerate> fetchByTrack(org.tylproject.db.public_.udt.records.TrackRecord... values) {
+		return fetch(org.tylproject.db.public_.tables.ExcExchangerate.EXC_EXCHANGERATE.TRACK, values);
+	}
 }

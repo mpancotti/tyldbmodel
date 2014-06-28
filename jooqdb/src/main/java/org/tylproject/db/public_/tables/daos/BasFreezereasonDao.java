@@ -55,31 +55,10 @@ public class BasFreezereasonDao extends org.jooq.impl.DAOImpl<org.tylproject.db.
 	}
 
 	/**
-	 * Fetch records that have <code>created_on IN (values)</code>
+	 * Fetch records that have <code>description IN (values)</code>
 	 */
-	public java.util.List<org.tylproject.db.public_.tables.pojos.BasFreezereason> fetchByCreatedOn(java.sql.Timestamp... values) {
-		return fetch(org.tylproject.db.public_.tables.BasFreezereason.BAS_FREEZEREASON.CREATED_ON, values);
-	}
-
-	/**
-	 * Fetch records that have <code>created_by IN (values)</code>
-	 */
-	public java.util.List<org.tylproject.db.public_.tables.pojos.BasFreezereason> fetchByCreatedBy(java.lang.String... values) {
-		return fetch(org.tylproject.db.public_.tables.BasFreezereason.BAS_FREEZEREASON.CREATED_BY, values);
-	}
-
-	/**
-	 * Fetch records that have <code>updated_on IN (values)</code>
-	 */
-	public java.util.List<org.tylproject.db.public_.tables.pojos.BasFreezereason> fetchByUpdatedOn(java.sql.Timestamp... values) {
-		return fetch(org.tylproject.db.public_.tables.BasFreezereason.BAS_FREEZEREASON.UPDATED_ON, values);
-	}
-
-	/**
-	 * Fetch records that have <code>updated_by IN (values)</code>
-	 */
-	public java.util.List<org.tylproject.db.public_.tables.pojos.BasFreezereason> fetchByUpdatedBy(java.lang.String... values) {
-		return fetch(org.tylproject.db.public_.tables.BasFreezereason.BAS_FREEZEREASON.UPDATED_BY, values);
+	public java.util.List<org.tylproject.db.public_.tables.pojos.BasFreezereason> fetchByDescription(java.lang.String... values) {
+		return fetch(org.tylproject.db.public_.tables.BasFreezereason.BAS_FREEZEREASON.DESCRIPTION, values);
 	}
 
 	/**
@@ -94,5 +73,12 @@ public class BasFreezereasonDao extends org.jooq.impl.DAOImpl<org.tylproject.db.
 	 */
 	public java.util.List<org.tylproject.db.public_.tables.pojos.BasFreezereason> fetchByVersion(java.lang.Integer... values) {
 		return fetch(org.tylproject.db.public_.tables.BasFreezereason.BAS_FREEZEREASON.VERSION, values);
+	}
+
+	/**
+	 * Fetch records that have <code>track IN (values)</code>
+	 */
+	public java.util.List<org.tylproject.db.public_.tables.pojos.BasFreezereason> fetchByTrack(org.tylproject.db.public_.udt.records.TrackRecord... values) {
+		return fetch(org.tylproject.db.public_.tables.BasFreezereason.BAS_FREEZEREASON.TRACK, values);
 	}
 }

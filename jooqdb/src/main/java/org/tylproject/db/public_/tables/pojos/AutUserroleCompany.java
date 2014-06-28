@@ -11,40 +11,31 @@ package org.tylproject.db.public_.tables.pojos;
 @java.lang.SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class AutUserroleCompany implements java.io.Serializable {
 
-	private static final long serialVersionUID = 247930625;
+	private static final long serialVersionUID = -667515204;
 
-	private java.lang.Integer  idAutUserroleCompany;
-	private java.lang.String   idAutUser;
-	private java.lang.String   idAutUserrole;
-	private java.lang.String   idAutCompany;
-	private java.sql.Timestamp createdOn;
-	private java.lang.String   createdBy;
-	private java.sql.Timestamp updatedOn;
-	private java.lang.String   updatedBy;
-	private java.lang.Integer  version;
+	private java.lang.Integer                         idAutUserroleCompany;
+	private java.lang.String                          idAutUser;
+	private java.lang.String                          idAutUserrole;
+	private java.lang.String                          idAutCompany;
+	private java.lang.Integer                         version;
+	private org.tylproject.db.public_.udt.pojos.Track track;
 
 	public AutUserroleCompany() {}
 
 	public AutUserroleCompany(
-		java.lang.Integer  idAutUserroleCompany,
-		java.lang.String   idAutUser,
-		java.lang.String   idAutUserrole,
-		java.lang.String   idAutCompany,
-		java.sql.Timestamp createdOn,
-		java.lang.String   createdBy,
-		java.sql.Timestamp updatedOn,
-		java.lang.String   updatedBy,
-		java.lang.Integer  version
+		java.lang.Integer                         idAutUserroleCompany,
+		java.lang.String                          idAutUser,
+		java.lang.String                          idAutUserrole,
+		java.lang.String                          idAutCompany,
+		java.lang.Integer                         version,
+		org.tylproject.db.public_.udt.pojos.Track track
 	) {
 		this.idAutUserroleCompany = idAutUserroleCompany;
 		this.idAutUser = idAutUser;
 		this.idAutUserrole = idAutUserrole;
 		this.idAutCompany = idAutCompany;
-		this.createdOn = createdOn;
-		this.createdBy = createdBy;
-		this.updatedOn = updatedOn;
-		this.updatedBy = updatedBy;
 		this.version = version;
+		this.track = track;
 	}
 
 	public java.lang.Integer getIdAutUserroleCompany() {
@@ -83,48 +74,21 @@ public class AutUserroleCompany implements java.io.Serializable {
 		return this;
 	}
 
-	public java.sql.Timestamp getCreatedOn() {
-		return this.createdOn;
-	}
-
-	public AutUserroleCompany setCreatedOn(java.sql.Timestamp createdOn) {
-		this.createdOn = createdOn;
-		return this;
-	}
-
-	public java.lang.String getCreatedBy() {
-		return this.createdBy;
-	}
-
-	public AutUserroleCompany setCreatedBy(java.lang.String createdBy) {
-		this.createdBy = createdBy;
-		return this;
-	}
-
-	public java.sql.Timestamp getUpdatedOn() {
-		return this.updatedOn;
-	}
-
-	public AutUserroleCompany setUpdatedOn(java.sql.Timestamp updatedOn) {
-		this.updatedOn = updatedOn;
-		return this;
-	}
-
-	public java.lang.String getUpdatedBy() {
-		return this.updatedBy;
-	}
-
-	public AutUserroleCompany setUpdatedBy(java.lang.String updatedBy) {
-		this.updatedBy = updatedBy;
-		return this;
-	}
-
 	public java.lang.Integer getVersion() {
 		return this.version;
 	}
 
 	public AutUserroleCompany setVersion(java.lang.Integer version) {
 		this.version = version;
+		return this;
+	}
+
+	public org.tylproject.db.public_.udt.pojos.Track getTrack() {
+		return this.track;
+	}
+
+	public AutUserroleCompany setTrack(org.tylproject.db.public_.udt.pojos.Track track) {
+		this.track = track;
 		return this;
 	}
 }

@@ -11,43 +11,34 @@ package org.tylproject.db.public_.tables.pojos;
 @java.lang.SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class BasLanguage implements java.io.Serializable {
 
-	private static final long serialVersionUID = -1363189314;
+	private static final long serialVersionUID = 1747352605;
 
-	private java.lang.String   idBasLanguage;
-	private java.lang.String   flag;
-	private java.lang.String   name;
-	private java.sql.Timestamp createdOn;
-	private java.lang.String   createdBy;
-	private java.sql.Timestamp updatedOn;
-	private java.lang.String   updatedBy;
-	private java.lang.Boolean  canceled;
-	private java.lang.Integer  version;
-	private java.lang.Boolean  active;
+	private java.lang.String                          idBasLanguage;
+	private java.lang.Boolean                         active;
+	private java.lang.String                          flag;
+	private java.lang.String                          name;
+	private java.lang.Boolean                         canceled;
+	private java.lang.Integer                         version;
+	private org.tylproject.db.public_.udt.pojos.Track track;
 
 	public BasLanguage() {}
 
 	public BasLanguage(
-		java.lang.String   idBasLanguage,
-		java.lang.String   flag,
-		java.lang.String   name,
-		java.sql.Timestamp createdOn,
-		java.lang.String   createdBy,
-		java.sql.Timestamp updatedOn,
-		java.lang.String   updatedBy,
-		java.lang.Boolean  canceled,
-		java.lang.Integer  version,
-		java.lang.Boolean  active
+		java.lang.String                          idBasLanguage,
+		java.lang.Boolean                         active,
+		java.lang.String                          flag,
+		java.lang.String                          name,
+		java.lang.Boolean                         canceled,
+		java.lang.Integer                         version,
+		org.tylproject.db.public_.udt.pojos.Track track
 	) {
 		this.idBasLanguage = idBasLanguage;
+		this.active = active;
 		this.flag = flag;
 		this.name = name;
-		this.createdOn = createdOn;
-		this.createdBy = createdBy;
-		this.updatedOn = updatedOn;
-		this.updatedBy = updatedBy;
 		this.canceled = canceled;
 		this.version = version;
-		this.active = active;
+		this.track = track;
 	}
 
 	public java.lang.String getIdBasLanguage() {
@@ -56,6 +47,15 @@ public class BasLanguage implements java.io.Serializable {
 
 	public BasLanguage setIdBasLanguage(java.lang.String idBasLanguage) {
 		this.idBasLanguage = idBasLanguage;
+		return this;
+	}
+
+	public java.lang.Boolean getActive() {
+		return this.active;
+	}
+
+	public BasLanguage setActive(java.lang.Boolean active) {
+		this.active = active;
 		return this;
 	}
 
@@ -77,42 +77,6 @@ public class BasLanguage implements java.io.Serializable {
 		return this;
 	}
 
-	public java.sql.Timestamp getCreatedOn() {
-		return this.createdOn;
-	}
-
-	public BasLanguage setCreatedOn(java.sql.Timestamp createdOn) {
-		this.createdOn = createdOn;
-		return this;
-	}
-
-	public java.lang.String getCreatedBy() {
-		return this.createdBy;
-	}
-
-	public BasLanguage setCreatedBy(java.lang.String createdBy) {
-		this.createdBy = createdBy;
-		return this;
-	}
-
-	public java.sql.Timestamp getUpdatedOn() {
-		return this.updatedOn;
-	}
-
-	public BasLanguage setUpdatedOn(java.sql.Timestamp updatedOn) {
-		this.updatedOn = updatedOn;
-		return this;
-	}
-
-	public java.lang.String getUpdatedBy() {
-		return this.updatedBy;
-	}
-
-	public BasLanguage setUpdatedBy(java.lang.String updatedBy) {
-		this.updatedBy = updatedBy;
-		return this;
-	}
-
 	public java.lang.Boolean getCanceled() {
 		return this.canceled;
 	}
@@ -131,12 +95,12 @@ public class BasLanguage implements java.io.Serializable {
 		return this;
 	}
 
-	public java.lang.Boolean getActive() {
-		return this.active;
+	public org.tylproject.db.public_.udt.pojos.Track getTrack() {
+		return this.track;
 	}
 
-	public BasLanguage setActive(java.lang.Boolean active) {
-		this.active = active;
+	public BasLanguage setTrack(org.tylproject.db.public_.udt.pojos.Track track) {
+		this.track = track;
 		return this;
 	}
 }

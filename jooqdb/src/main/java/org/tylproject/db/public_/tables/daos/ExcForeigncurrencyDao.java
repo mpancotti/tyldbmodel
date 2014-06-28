@@ -46,4 +46,39 @@ public class ExcForeigncurrencyDao extends org.jooq.impl.DAOImpl<org.tylproject.
 	public org.tylproject.db.public_.tables.pojos.ExcForeigncurrency fetchOneByIdExcForeigncurrency(java.lang.String value) {
 		return fetchOne(org.tylproject.db.public_.tables.ExcForeigncurrency.EXC_FOREIGNCURRENCY.ID_EXC_FOREIGNCURRENCY, value);
 	}
+
+	/**
+	 * Fetch records that have <code>symbol IN (values)</code>
+	 */
+	public java.util.List<org.tylproject.db.public_.tables.pojos.ExcForeigncurrency> fetchBySymbol(java.lang.String... values) {
+		return fetch(org.tylproject.db.public_.tables.ExcForeigncurrency.EXC_FOREIGNCURRENCY.SYMBOL, values);
+	}
+
+	/**
+	 * Fetch records that have <code>name IN (values)</code>
+	 */
+	public java.util.List<org.tylproject.db.public_.tables.pojos.ExcForeigncurrency> fetchByName(java.lang.String... values) {
+		return fetch(org.tylproject.db.public_.tables.ExcForeigncurrency.EXC_FOREIGNCURRENCY.NAME, values);
+	}
+
+	/**
+	 * Fetch records that have <code>canceled IN (values)</code>
+	 */
+	public java.util.List<org.tylproject.db.public_.tables.pojos.ExcForeigncurrency> fetchByCanceled(java.lang.Boolean... values) {
+		return fetch(org.tylproject.db.public_.tables.ExcForeigncurrency.EXC_FOREIGNCURRENCY.CANCELED, values);
+	}
+
+	/**
+	 * Fetch records that have <code>version IN (values)</code>
+	 */
+	public java.util.List<org.tylproject.db.public_.tables.pojos.ExcForeigncurrency> fetchByVersion(java.lang.Integer... values) {
+		return fetch(org.tylproject.db.public_.tables.ExcForeigncurrency.EXC_FOREIGNCURRENCY.VERSION, values);
+	}
+
+	/**
+	 * Fetch records that have <code>track IN (values)</code>
+	 */
+	public java.util.List<org.tylproject.db.public_.tables.pojos.ExcForeigncurrency> fetchByTrack(org.tylproject.db.public_.udt.records.TrackRecord... values) {
+		return fetch(org.tylproject.db.public_.tables.ExcForeigncurrency.EXC_FOREIGNCURRENCY.TRACK, values);
+	}
 }

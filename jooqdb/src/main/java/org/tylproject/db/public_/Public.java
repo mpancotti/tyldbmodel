@@ -11,7 +11,7 @@ package org.tylproject.db.public_;
 @java.lang.SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Public extends org.jooq.impl.SchemaImpl {
 
-	private static final long serialVersionUID = -341291901;
+	private static final long serialVersionUID = -943636303;
 
 	/**
 	 * The singleton instance of <code>public</code>
@@ -37,7 +37,8 @@ public class Public extends org.jooq.impl.SchemaImpl {
 			org.tylproject.db.public_.Sequences.AUT_USERCOMPROLE_ID_SEQ,
 			org.tylproject.db.public_.Sequences.BAS_DISTRICT_ID_SEQ,
 			org.tylproject.db.public_.Sequences.EXC_EXCHANGERATE_IDEXC_EXCHANGERATE_SEQ,
-			org.tylproject.db.public_.Sequences.EXC_EXCHANGERATE_ID_SEQ);
+			org.tylproject.db.public_.Sequences.EXC_EXCHANGERATE_ID_SEQ,
+			org.tylproject.db.public_.Sequences.TODOS_ID_SEQ);
 	}
 
 	@Override
@@ -58,7 +59,8 @@ public class Public extends org.jooq.impl.SchemaImpl {
 			org.tylproject.db.public_.tables.BasFreezereason.BAS_FREEZEREASON,
 			org.tylproject.db.public_.tables.BasLanguage.BAS_LANGUAGE,
 			org.tylproject.db.public_.tables.ExcExchangerate.EXC_EXCHANGERATE,
-			org.tylproject.db.public_.tables.ExcForeigncurrency.EXC_FOREIGNCURRENCY);
+			org.tylproject.db.public_.tables.ExcForeigncurrency.EXC_FOREIGNCURRENCY,
+			org.tylproject.db.public_.tables.Todos.TODOS);
 	}
 
 	@Override

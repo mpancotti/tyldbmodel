@@ -11,7 +11,7 @@ package org.tylproject.db.public_.tables;
 @java.lang.SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ExcExchangerate extends org.jooq.impl.TableImpl<org.tylproject.db.public_.tables.records.ExcExchangerateRecord> {
 
-	private static final long serialVersionUID = 1431437562;
+	private static final long serialVersionUID = -1444534875;
 
 	/**
 	 * The singleton instance of <code>public.exc_exchangerate</code>
@@ -30,6 +30,51 @@ public class ExcExchangerate extends org.jooq.impl.TableImpl<org.tylproject.db.p
 	 * The column <code>public.exc_exchangerate.id_exc_exchangerate</code>.
 	 */
 	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.ExcExchangerateRecord, java.lang.Integer> ID_EXC_EXCHANGERATE = createField("id_exc_exchangerate", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaulted(true), this, "");
+
+	/**
+	 * The column <code>public.exc_exchangerate.from_currency_fk</code>.
+	 */
+	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.ExcExchangerateRecord, java.lang.String> FROM_CURRENCY_FK = createField("from_currency_fk", org.jooq.impl.SQLDataType.VARCHAR.length(3), this, "");
+
+	/**
+	 * The column <code>public.exc_exchangerate.to_currency_fk</code>.
+	 */
+	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.ExcExchangerateRecord, java.lang.String> TO_CURRENCY_FK = createField("to_currency_fk", org.jooq.impl.SQLDataType.VARCHAR.length(3), this, "");
+
+	/**
+	 * The column <code>public.exc_exchangerate.from_date</code>.
+	 */
+	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.ExcExchangerateRecord, java.sql.Timestamp> FROM_DATE = createField("from_date", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
+
+	/**
+	 * The column <code>public.exc_exchangerate.thru_date</code>.
+	 */
+	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.ExcExchangerateRecord, java.sql.Timestamp> THRU_DATE = createField("thru_date", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
+
+	/**
+	 * The column <code>public.exc_exchangerate.rate</code>.
+	 */
+	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.ExcExchangerateRecord, java.math.BigDecimal> RATE = createField("rate", org.jooq.impl.SQLDataType.NUMERIC.precision(19, 8), this, "");
+
+	/**
+	 * The column <code>public.exc_exchangerate.rounding_factor</code>.
+	 */
+	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.ExcExchangerateRecord, java.math.BigDecimal> ROUNDING_FACTOR = createField("rounding_factor", org.jooq.impl.SQLDataType.NUMERIC.precision(7, 4), this, "");
+
+	/**
+	 * The column <code>public.exc_exchangerate.canceled</code>.
+	 */
+	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.ExcExchangerateRecord, java.lang.Boolean> CANCELED = createField("canceled", org.jooq.impl.SQLDataType.BOOLEAN, this, "");
+
+	/**
+	 * The column <code>public.exc_exchangerate.version</code>.
+	 */
+	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.ExcExchangerateRecord, java.lang.Integer> VERSION = createField("version", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+
+	/**
+	 * The column <code>public.exc_exchangerate.track</code>.
+	 */
+	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.ExcExchangerateRecord, org.tylproject.db.public_.udt.records.TrackRecord> TRACK = createField("track", org.tylproject.db.public_.udt.Track.TRACK.getDataType(), this, "");
 
 	/**
 	 * Create a <code>public.exc_exchangerate</code> table reference
@@ -75,6 +120,22 @@ public class ExcExchangerate extends org.jooq.impl.TableImpl<org.tylproject.db.p
 	@Override
 	public java.util.List<org.jooq.UniqueKey<org.tylproject.db.public_.tables.records.ExcExchangerateRecord>> getKeys() {
 		return java.util.Arrays.<org.jooq.UniqueKey<org.tylproject.db.public_.tables.records.ExcExchangerateRecord>>asList(org.tylproject.db.public_.Keys.EXC_EXCHANGERATE_PKEY);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public java.util.List<org.jooq.ForeignKey<org.tylproject.db.public_.tables.records.ExcExchangerateRecord, ?>> getReferences() {
+		return java.util.Arrays.<org.jooq.ForeignKey<org.tylproject.db.public_.tables.records.ExcExchangerateRecord, ?>>asList(org.tylproject.db.public_.Keys.EXC_EXCHANGERATE__EXC_EXCHANGERATE_FK, org.tylproject.db.public_.Keys.EXC_EXCHANGERATE__EXC_EXCHANGERATE_FK1);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public org.jooq.TableField<org.tylproject.db.public_.tables.records.ExcExchangerateRecord, java.lang.Integer> getRecordVersion() {
+		return org.tylproject.db.public_.tables.ExcExchangerate.EXC_EXCHANGERATE.VERSION;
 	}
 
 	/**

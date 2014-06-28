@@ -11,7 +11,7 @@ package org.tylproject.db.public_.tables;
 @java.lang.SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class BasDistrict extends org.jooq.impl.TableImpl<org.tylproject.db.public_.tables.records.BasDistrictRecord> {
 
-	private static final long serialVersionUID = 908000880;
+	private static final long serialVersionUID = -1123016522;
 
 	/**
 	 * The singleton instance of <code>public.bas_district</code>
@@ -52,26 +52,6 @@ public class BasDistrict extends org.jooq.impl.TableImpl<org.tylproject.db.publi
 	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasDistrictRecord, java.lang.String> POSTAL_CODE = createField("postal_code", org.jooq.impl.SQLDataType.VARCHAR.length(16), this, "");
 
 	/**
-	 * The column <code>public.bas_district.created_on</code>.
-	 */
-	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasDistrictRecord, java.sql.Timestamp> CREATED_ON = createField("created_on", org.jooq.impl.SQLDataType.TIMESTAMP.defaulted(true), this, "");
-
-	/**
-	 * The column <code>public.bas_district.created_by</code>.
-	 */
-	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasDistrictRecord, java.lang.String> CREATED_BY = createField("created_by", org.jooq.impl.SQLDataType.VARCHAR.length(1), this, "");
-
-	/**
-	 * The column <code>public.bas_district.updated_on</code>.
-	 */
-	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasDistrictRecord, java.sql.Timestamp> UPDATED_ON = createField("updated_on", org.jooq.impl.SQLDataType.TIMESTAMP.defaulted(true), this, "");
-
-	/**
-	 * The column <code>public.bas_district.updated_by</code>.
-	 */
-	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasDistrictRecord, java.lang.String> UPDATED_BY = createField("updated_by", org.jooq.impl.SQLDataType.VARCHAR.length(1), this, "");
-
-	/**
 	 * The column <code>public.bas_district.canceled</code>.
 	 */
 	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasDistrictRecord, java.lang.Boolean> CANCELED = createField("canceled", org.jooq.impl.SQLDataType.BOOLEAN.defaulted(true), this, "");
@@ -79,7 +59,12 @@ public class BasDistrict extends org.jooq.impl.TableImpl<org.tylproject.db.publi
 	/**
 	 * The column <code>public.bas_district.version</code>.
 	 */
-	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasDistrictRecord, java.lang.Integer> VERSION = createField("version", org.jooq.impl.SQLDataType.INTEGER.defaulted(true), this, "");
+	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasDistrictRecord, java.lang.Integer> VERSION = createField("version", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaulted(true), this, "");
+
+	/**
+	 * The column <code>public.bas_district.track</code>.
+	 */
+	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasDistrictRecord, org.tylproject.db.public_.udt.records.TrackRecord> TRACK = createField("track", org.tylproject.db.public_.udt.Track.TRACK.getDataType(), this, "");
 
 	/**
 	 * Create a <code>public.bas_district</code> table reference

@@ -32,4 +32,9 @@ public class Sequences {
 	 * The sequence <code>public.exc_exchangerate_id_seq</code>
 	 */
 	public static final org.jooq.Sequence<java.lang.Long> EXC_EXCHANGERATE_ID_SEQ = new org.jooq.impl.SequenceImpl<java.lang.Long>("exc_exchangerate_id_seq", org.tylproject.db.public_.Public.PUBLIC, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+
+	/**
+	 * The sequence <code>public.todos_id_seq</code>
+	 */
+	public static final org.jooq.Sequence<java.lang.Long> TODOS_ID_SEQ = new org.jooq.impl.SequenceImpl<java.lang.Long>("todos_id_seq", org.tylproject.db.public_.Public.PUBLIC, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
 }

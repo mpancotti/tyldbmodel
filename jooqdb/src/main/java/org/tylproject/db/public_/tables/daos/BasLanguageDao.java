@@ -48,6 +48,13 @@ public class BasLanguageDao extends org.jooq.impl.DAOImpl<org.tylproject.db.publ
 	}
 
 	/**
+	 * Fetch records that have <code>active IN (values)</code>
+	 */
+	public java.util.List<org.tylproject.db.public_.tables.pojos.BasLanguage> fetchByActive(java.lang.Boolean... values) {
+		return fetch(org.tylproject.db.public_.tables.BasLanguage.BAS_LANGUAGE.ACTIVE, values);
+	}
+
+	/**
 	 * Fetch records that have <code>flag IN (values)</code>
 	 */
 	public java.util.List<org.tylproject.db.public_.tables.pojos.BasLanguage> fetchByFlag(java.lang.String... values) {
@@ -59,34 +66,6 @@ public class BasLanguageDao extends org.jooq.impl.DAOImpl<org.tylproject.db.publ
 	 */
 	public java.util.List<org.tylproject.db.public_.tables.pojos.BasLanguage> fetchByName(java.lang.String... values) {
 		return fetch(org.tylproject.db.public_.tables.BasLanguage.BAS_LANGUAGE.NAME, values);
-	}
-
-	/**
-	 * Fetch records that have <code>created_on IN (values)</code>
-	 */
-	public java.util.List<org.tylproject.db.public_.tables.pojos.BasLanguage> fetchByCreatedOn(java.sql.Timestamp... values) {
-		return fetch(org.tylproject.db.public_.tables.BasLanguage.BAS_LANGUAGE.CREATED_ON, values);
-	}
-
-	/**
-	 * Fetch records that have <code>created_by IN (values)</code>
-	 */
-	public java.util.List<org.tylproject.db.public_.tables.pojos.BasLanguage> fetchByCreatedBy(java.lang.String... values) {
-		return fetch(org.tylproject.db.public_.tables.BasLanguage.BAS_LANGUAGE.CREATED_BY, values);
-	}
-
-	/**
-	 * Fetch records that have <code>updated_on IN (values)</code>
-	 */
-	public java.util.List<org.tylproject.db.public_.tables.pojos.BasLanguage> fetchByUpdatedOn(java.sql.Timestamp... values) {
-		return fetch(org.tylproject.db.public_.tables.BasLanguage.BAS_LANGUAGE.UPDATED_ON, values);
-	}
-
-	/**
-	 * Fetch records that have <code>updated_by IN (values)</code>
-	 */
-	public java.util.List<org.tylproject.db.public_.tables.pojos.BasLanguage> fetchByUpdatedBy(java.lang.String... values) {
-		return fetch(org.tylproject.db.public_.tables.BasLanguage.BAS_LANGUAGE.UPDATED_BY, values);
 	}
 
 	/**
@@ -104,9 +83,9 @@ public class BasLanguageDao extends org.jooq.impl.DAOImpl<org.tylproject.db.publ
 	}
 
 	/**
-	 * Fetch records that have <code>active IN (values)</code>
+	 * Fetch records that have <code>track IN (values)</code>
 	 */
-	public java.util.List<org.tylproject.db.public_.tables.pojos.BasLanguage> fetchByActive(java.lang.Boolean... values) {
-		return fetch(org.tylproject.db.public_.tables.BasLanguage.BAS_LANGUAGE.ACTIVE, values);
+	public java.util.List<org.tylproject.db.public_.tables.pojos.BasLanguage> fetchByTrack(org.tylproject.db.public_.udt.records.TrackRecord... values) {
+		return fetch(org.tylproject.db.public_.tables.BasLanguage.BAS_LANGUAGE.TRACK, values);
 	}
 }

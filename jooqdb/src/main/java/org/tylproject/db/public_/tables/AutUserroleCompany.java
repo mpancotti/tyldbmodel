@@ -11,7 +11,7 @@ package org.tylproject.db.public_.tables;
 @java.lang.SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class AutUserroleCompany extends org.jooq.impl.TableImpl<org.tylproject.db.public_.tables.records.AutUserroleCompanyRecord> {
 
-	private static final long serialVersionUID = 2080249652;
+	private static final long serialVersionUID = -908698216;
 
 	/**
 	 * The singleton instance of <code>public.aut_userrole_company</code>
@@ -47,29 +47,14 @@ public class AutUserroleCompany extends org.jooq.impl.TableImpl<org.tylproject.d
 	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.AutUserroleCompanyRecord, java.lang.String> ID_AUT_COMPANY = createField("id_aut_company", org.jooq.impl.SQLDataType.VARCHAR.length(32), this, "");
 
 	/**
-	 * The column <code>public.aut_userrole_company.created_on</code>.
-	 */
-	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.AutUserroleCompanyRecord, java.sql.Timestamp> CREATED_ON = createField("created_on", org.jooq.impl.SQLDataType.TIMESTAMP.defaulted(true), this, "");
-
-	/**
-	 * The column <code>public.aut_userrole_company.created_by</code>.
-	 */
-	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.AutUserroleCompanyRecord, java.lang.String> CREATED_BY = createField("created_by", org.jooq.impl.SQLDataType.VARCHAR.length(64), this, "");
-
-	/**
-	 * The column <code>public.aut_userrole_company.updated_on</code>.
-	 */
-	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.AutUserroleCompanyRecord, java.sql.Timestamp> UPDATED_ON = createField("updated_on", org.jooq.impl.SQLDataType.TIMESTAMP.defaulted(true), this, "");
-
-	/**
-	 * The column <code>public.aut_userrole_company.updated_by</code>.
-	 */
-	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.AutUserroleCompanyRecord, java.lang.String> UPDATED_BY = createField("updated_by", org.jooq.impl.SQLDataType.VARCHAR.length(64), this, "");
-
-	/**
 	 * The column <code>public.aut_userrole_company.version</code>.
 	 */
 	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.AutUserroleCompanyRecord, java.lang.Integer> VERSION = createField("version", org.jooq.impl.SQLDataType.INTEGER.defaulted(true), this, "");
+
+	/**
+	 * The column <code>public.aut_userrole_company.track</code>.
+	 */
+	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.AutUserroleCompanyRecord, org.tylproject.db.public_.udt.records.TrackRecord> TRACK = createField("track", org.tylproject.db.public_.udt.Track.TRACK.getDataType(), this, "");
 
 	/**
 	 * Create a <code>public.aut_userrole_company</code> table reference

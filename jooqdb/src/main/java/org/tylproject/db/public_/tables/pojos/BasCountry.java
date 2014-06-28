@@ -11,43 +11,34 @@ package org.tylproject.db.public_.tables.pojos;
 @java.lang.SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class BasCountry implements java.io.Serializable {
 
-	private static final long serialVersionUID = -1524089640;
+	private static final long serialVersionUID = 1322613407;
 
-	private java.lang.String   idBasCountry;
-	private java.lang.String   officialName;
-	private java.lang.String   twoCharsCode;
-	private java.lang.Integer  numericCode;
-	private java.sql.Timestamp createdOn;
-	private java.lang.String   createdBy;
-	private java.sql.Timestamp updatedOn;
-	private java.lang.String   updatedBy;
-	private java.lang.Boolean  canceled;
-	private java.lang.Integer  version;
+	private java.lang.String                          idBasCountry;
+	private java.lang.String                          officialName;
+	private java.lang.String                          twoCharsCode;
+	private java.lang.Integer                         numericCode;
+	private java.lang.Boolean                         canceled;
+	private java.lang.Integer                         version;
+	private org.tylproject.db.public_.udt.pojos.Track track;
 
 	public BasCountry() {}
 
 	public BasCountry(
-		java.lang.String   idBasCountry,
-		java.lang.String   officialName,
-		java.lang.String   twoCharsCode,
-		java.lang.Integer  numericCode,
-		java.sql.Timestamp createdOn,
-		java.lang.String   createdBy,
-		java.sql.Timestamp updatedOn,
-		java.lang.String   updatedBy,
-		java.lang.Boolean  canceled,
-		java.lang.Integer  version
+		java.lang.String                          idBasCountry,
+		java.lang.String                          officialName,
+		java.lang.String                          twoCharsCode,
+		java.lang.Integer                         numericCode,
+		java.lang.Boolean                         canceled,
+		java.lang.Integer                         version,
+		org.tylproject.db.public_.udt.pojos.Track track
 	) {
 		this.idBasCountry = idBasCountry;
 		this.officialName = officialName;
 		this.twoCharsCode = twoCharsCode;
 		this.numericCode = numericCode;
-		this.createdOn = createdOn;
-		this.createdBy = createdBy;
-		this.updatedOn = updatedOn;
-		this.updatedBy = updatedBy;
 		this.canceled = canceled;
 		this.version = version;
+		this.track = track;
 	}
 
 	public java.lang.String getIdBasCountry() {
@@ -86,42 +77,6 @@ public class BasCountry implements java.io.Serializable {
 		return this;
 	}
 
-	public java.sql.Timestamp getCreatedOn() {
-		return this.createdOn;
-	}
-
-	public BasCountry setCreatedOn(java.sql.Timestamp createdOn) {
-		this.createdOn = createdOn;
-		return this;
-	}
-
-	public java.lang.String getCreatedBy() {
-		return this.createdBy;
-	}
-
-	public BasCountry setCreatedBy(java.lang.String createdBy) {
-		this.createdBy = createdBy;
-		return this;
-	}
-
-	public java.sql.Timestamp getUpdatedOn() {
-		return this.updatedOn;
-	}
-
-	public BasCountry setUpdatedOn(java.sql.Timestamp updatedOn) {
-		this.updatedOn = updatedOn;
-		return this;
-	}
-
-	public java.lang.String getUpdatedBy() {
-		return this.updatedBy;
-	}
-
-	public BasCountry setUpdatedBy(java.lang.String updatedBy) {
-		this.updatedBy = updatedBy;
-		return this;
-	}
-
 	public java.lang.Boolean getCanceled() {
 		return this.canceled;
 	}
@@ -137,6 +92,15 @@ public class BasCountry implements java.io.Serializable {
 
 	public BasCountry setVersion(java.lang.Integer version) {
 		this.version = version;
+		return this;
+	}
+
+	public org.tylproject.db.public_.udt.pojos.Track getTrack() {
+		return this.track;
+	}
+
+	public BasCountry setTrack(org.tylproject.db.public_.udt.pojos.Track track) {
+		this.track = track;
 		return this;
 	}
 }

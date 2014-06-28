@@ -11,16 +11,31 @@ package org.tylproject.db.public_.tables.pojos;
 @java.lang.SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ExcForeigncurrency implements java.io.Serializable {
 
-	private static final long serialVersionUID = -1124325987;
+	private static final long serialVersionUID = 2030462293;
 
-	private java.lang.String idExcForeigncurrency;
+	private java.lang.String                          idExcForeigncurrency;
+	private java.lang.String                          symbol;
+	private java.lang.String                          name;
+	private java.lang.Boolean                         canceled;
+	private java.lang.Integer                         version;
+	private org.tylproject.db.public_.udt.pojos.Track track;
 
 	public ExcForeigncurrency() {}
 
 	public ExcForeigncurrency(
-		java.lang.String idExcForeigncurrency
+		java.lang.String                          idExcForeigncurrency,
+		java.lang.String                          symbol,
+		java.lang.String                          name,
+		java.lang.Boolean                         canceled,
+		java.lang.Integer                         version,
+		org.tylproject.db.public_.udt.pojos.Track track
 	) {
 		this.idExcForeigncurrency = idExcForeigncurrency;
+		this.symbol = symbol;
+		this.name = name;
+		this.canceled = canceled;
+		this.version = version;
+		this.track = track;
 	}
 
 	public java.lang.String getIdExcForeigncurrency() {
@@ -29,6 +44,51 @@ public class ExcForeigncurrency implements java.io.Serializable {
 
 	public ExcForeigncurrency setIdExcForeigncurrency(java.lang.String idExcForeigncurrency) {
 		this.idExcForeigncurrency = idExcForeigncurrency;
+		return this;
+	}
+
+	public java.lang.String getSymbol() {
+		return this.symbol;
+	}
+
+	public ExcForeigncurrency setSymbol(java.lang.String symbol) {
+		this.symbol = symbol;
+		return this;
+	}
+
+	public java.lang.String getName() {
+		return this.name;
+	}
+
+	public ExcForeigncurrency setName(java.lang.String name) {
+		this.name = name;
+		return this;
+	}
+
+	public java.lang.Boolean getCanceled() {
+		return this.canceled;
+	}
+
+	public ExcForeigncurrency setCanceled(java.lang.Boolean canceled) {
+		this.canceled = canceled;
+		return this;
+	}
+
+	public java.lang.Integer getVersion() {
+		return this.version;
+	}
+
+	public ExcForeigncurrency setVersion(java.lang.Integer version) {
+		this.version = version;
+		return this;
+	}
+
+	public org.tylproject.db.public_.udt.pojos.Track getTrack() {
+		return this.track;
+	}
+
+	public ExcForeigncurrency setTrack(org.tylproject.db.public_.udt.pojos.Track track) {
+		this.track = track;
 		return this;
 	}
 }

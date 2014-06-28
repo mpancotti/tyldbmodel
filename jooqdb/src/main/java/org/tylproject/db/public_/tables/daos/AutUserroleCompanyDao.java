@@ -69,37 +69,16 @@ public class AutUserroleCompanyDao extends org.jooq.impl.DAOImpl<org.tylproject.
 	}
 
 	/**
-	 * Fetch records that have <code>created_on IN (values)</code>
-	 */
-	public java.util.List<org.tylproject.db.public_.tables.pojos.AutUserroleCompany> fetchByCreatedOn(java.sql.Timestamp... values) {
-		return fetch(org.tylproject.db.public_.tables.AutUserroleCompany.AUT_USERROLE_COMPANY.CREATED_ON, values);
-	}
-
-	/**
-	 * Fetch records that have <code>created_by IN (values)</code>
-	 */
-	public java.util.List<org.tylproject.db.public_.tables.pojos.AutUserroleCompany> fetchByCreatedBy(java.lang.String... values) {
-		return fetch(org.tylproject.db.public_.tables.AutUserroleCompany.AUT_USERROLE_COMPANY.CREATED_BY, values);
-	}
-
-	/**
-	 * Fetch records that have <code>updated_on IN (values)</code>
-	 */
-	public java.util.List<org.tylproject.db.public_.tables.pojos.AutUserroleCompany> fetchByUpdatedOn(java.sql.Timestamp... values) {
-		return fetch(org.tylproject.db.public_.tables.AutUserroleCompany.AUT_USERROLE_COMPANY.UPDATED_ON, values);
-	}
-
-	/**
-	 * Fetch records that have <code>updated_by IN (values)</code>
-	 */
-	public java.util.List<org.tylproject.db.public_.tables.pojos.AutUserroleCompany> fetchByUpdatedBy(java.lang.String... values) {
-		return fetch(org.tylproject.db.public_.tables.AutUserroleCompany.AUT_USERROLE_COMPANY.UPDATED_BY, values);
-	}
-
-	/**
 	 * Fetch records that have <code>version IN (values)</code>
 	 */
 	public java.util.List<org.tylproject.db.public_.tables.pojos.AutUserroleCompany> fetchByVersion(java.lang.Integer... values) {
 		return fetch(org.tylproject.db.public_.tables.AutUserroleCompany.AUT_USERROLE_COMPANY.VERSION, values);
+	}
+
+	/**
+	 * Fetch records that have <code>track IN (values)</code>
+	 */
+	public java.util.List<org.tylproject.db.public_.tables.pojos.AutUserroleCompany> fetchByTrack(org.tylproject.db.public_.udt.records.TrackRecord... values) {
+		return fetch(org.tylproject.db.public_.tables.AutUserroleCompany.AUT_USERROLE_COMPANY.TRACK, values);
 	}
 }

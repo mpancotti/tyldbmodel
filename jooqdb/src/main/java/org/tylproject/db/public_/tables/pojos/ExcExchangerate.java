@@ -11,16 +11,43 @@ package org.tylproject.db.public_.tables.pojos;
 @java.lang.SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ExcExchangerate implements java.io.Serializable {
 
-	private static final long serialVersionUID = -451092207;
+	private static final long serialVersionUID = -899614281;
 
-	private java.lang.Integer idExcExchangerate;
+	private java.lang.Integer                         idExcExchangerate;
+	private java.lang.String                          fromCurrencyFk;
+	private java.lang.String                          toCurrencyFk;
+	private java.sql.Timestamp                        fromDate;
+	private java.sql.Timestamp                        thruDate;
+	private java.math.BigDecimal                      rate;
+	private java.math.BigDecimal                      roundingFactor;
+	private java.lang.Boolean                         canceled;
+	private java.lang.Integer                         version;
+	private org.tylproject.db.public_.udt.pojos.Track track;
 
 	public ExcExchangerate() {}
 
 	public ExcExchangerate(
-		java.lang.Integer idExcExchangerate
+		java.lang.Integer                         idExcExchangerate,
+		java.lang.String                          fromCurrencyFk,
+		java.lang.String                          toCurrencyFk,
+		java.sql.Timestamp                        fromDate,
+		java.sql.Timestamp                        thruDate,
+		java.math.BigDecimal                      rate,
+		java.math.BigDecimal                      roundingFactor,
+		java.lang.Boolean                         canceled,
+		java.lang.Integer                         version,
+		org.tylproject.db.public_.udt.pojos.Track track
 	) {
 		this.idExcExchangerate = idExcExchangerate;
+		this.fromCurrencyFk = fromCurrencyFk;
+		this.toCurrencyFk = toCurrencyFk;
+		this.fromDate = fromDate;
+		this.thruDate = thruDate;
+		this.rate = rate;
+		this.roundingFactor = roundingFactor;
+		this.canceled = canceled;
+		this.version = version;
+		this.track = track;
 	}
 
 	public java.lang.Integer getIdExcExchangerate() {
@@ -29,6 +56,87 @@ public class ExcExchangerate implements java.io.Serializable {
 
 	public ExcExchangerate setIdExcExchangerate(java.lang.Integer idExcExchangerate) {
 		this.idExcExchangerate = idExcExchangerate;
+		return this;
+	}
+
+	public java.lang.String getFromCurrencyFk() {
+		return this.fromCurrencyFk;
+	}
+
+	public ExcExchangerate setFromCurrencyFk(java.lang.String fromCurrencyFk) {
+		this.fromCurrencyFk = fromCurrencyFk;
+		return this;
+	}
+
+	public java.lang.String getToCurrencyFk() {
+		return this.toCurrencyFk;
+	}
+
+	public ExcExchangerate setToCurrencyFk(java.lang.String toCurrencyFk) {
+		this.toCurrencyFk = toCurrencyFk;
+		return this;
+	}
+
+	public java.sql.Timestamp getFromDate() {
+		return this.fromDate;
+	}
+
+	public ExcExchangerate setFromDate(java.sql.Timestamp fromDate) {
+		this.fromDate = fromDate;
+		return this;
+	}
+
+	public java.sql.Timestamp getThruDate() {
+		return this.thruDate;
+	}
+
+	public ExcExchangerate setThruDate(java.sql.Timestamp thruDate) {
+		this.thruDate = thruDate;
+		return this;
+	}
+
+	public java.math.BigDecimal getRate() {
+		return this.rate;
+	}
+
+	public ExcExchangerate setRate(java.math.BigDecimal rate) {
+		this.rate = rate;
+		return this;
+	}
+
+	public java.math.BigDecimal getRoundingFactor() {
+		return this.roundingFactor;
+	}
+
+	public ExcExchangerate setRoundingFactor(java.math.BigDecimal roundingFactor) {
+		this.roundingFactor = roundingFactor;
+		return this;
+	}
+
+	public java.lang.Boolean getCanceled() {
+		return this.canceled;
+	}
+
+	public ExcExchangerate setCanceled(java.lang.Boolean canceled) {
+		this.canceled = canceled;
+		return this;
+	}
+
+	public java.lang.Integer getVersion() {
+		return this.version;
+	}
+
+	public ExcExchangerate setVersion(java.lang.Integer version) {
+		this.version = version;
+		return this;
+	}
+
+	public org.tylproject.db.public_.udt.pojos.Track getTrack() {
+		return this.track;
+	}
+
+	public ExcExchangerate setTrack(org.tylproject.db.public_.udt.pojos.Track track) {
+		this.track = track;
 		return this;
 	}
 }

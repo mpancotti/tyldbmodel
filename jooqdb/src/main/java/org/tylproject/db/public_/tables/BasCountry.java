@@ -11,7 +11,7 @@ package org.tylproject.db.public_.tables;
 @java.lang.SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class BasCountry extends org.jooq.impl.TableImpl<org.tylproject.db.public_.tables.records.BasCountryRecord> {
 
-	private static final long serialVersionUID = 1577714688;
+	private static final long serialVersionUID = -317192799;
 
 	/**
 	 * The singleton instance of <code>public.bas_country</code>
@@ -47,26 +47,6 @@ public class BasCountry extends org.jooq.impl.TableImpl<org.tylproject.db.public
 	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasCountryRecord, java.lang.Integer> NUMERIC_CODE = createField("numeric_code", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>public.bas_country.created_on</code>.
-	 */
-	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasCountryRecord, java.sql.Timestamp> CREATED_ON = createField("created_on", org.jooq.impl.SQLDataType.TIMESTAMP.defaulted(true), this, "");
-
-	/**
-	 * The column <code>public.bas_country.created_by</code>.
-	 */
-	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasCountryRecord, java.lang.String> CREATED_BY = createField("created_by", org.jooq.impl.SQLDataType.VARCHAR.length(1), this, "");
-
-	/**
-	 * The column <code>public.bas_country.updated_on</code>.
-	 */
-	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasCountryRecord, java.sql.Timestamp> UPDATED_ON = createField("updated_on", org.jooq.impl.SQLDataType.TIMESTAMP.defaulted(true), this, "");
-
-	/**
-	 * The column <code>public.bas_country.updated_by</code>.
-	 */
-	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasCountryRecord, java.lang.String> UPDATED_BY = createField("updated_by", org.jooq.impl.SQLDataType.VARCHAR.length(1), this, "");
-
-	/**
 	 * The column <code>public.bas_country.canceled</code>.
 	 */
 	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasCountryRecord, java.lang.Boolean> CANCELED = createField("canceled", org.jooq.impl.SQLDataType.BOOLEAN.defaulted(true), this, "");
@@ -75,6 +55,11 @@ public class BasCountry extends org.jooq.impl.TableImpl<org.tylproject.db.public
 	 * The column <code>public.bas_country.version</code>.
 	 */
 	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasCountryRecord, java.lang.Integer> VERSION = createField("version", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaulted(true), this, "");
+
+	/**
+	 * The column <code>public.bas_country.track</code>.
+	 */
+	public final org.jooq.TableField<org.tylproject.db.public_.tables.records.BasCountryRecord, org.tylproject.db.public_.udt.records.TrackRecord> TRACK = createField("track", org.tylproject.db.public_.udt.Track.TRACK.getDataType(), this, "");
 
 	/**
 	 * Create a <code>public.bas_country</code> table reference
