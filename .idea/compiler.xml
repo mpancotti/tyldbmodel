@@ -27,9 +27,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="jooqdb" target="1.4" />
-      <module name="repo" target="1.4" />
-      <module name="tyldbmodel" target="1.4" />
+      <module name="jooqdb" target="1.7" />
+      <module name="repo" target="1.7" />
+      <module name="tyldbmodel" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
